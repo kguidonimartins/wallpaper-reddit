@@ -72,7 +72,7 @@ def linux_wallpaper():
         elif check_de(de, ["lubuntu", "Lubuntu"]):
             check_call(["pcmanfm", "-w", "%s" % path])
         elif check_de(de, ["i3", "bspwm"]):
-            check_call(["feh", "--bg-fill", path])
+            check_call(["xwallpaper", "--zoom", path])
         elif check_de(de, ["sway"]):
             check_call(["swaymsg", "output * bg %s fill" % path])
         elif config.setcmd == '':
