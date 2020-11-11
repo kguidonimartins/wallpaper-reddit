@@ -71,12 +71,12 @@ def linux_wallpaper():
                     check_call(["xfconf-query", "-c", "xfce4-desktop", "-p", prop, "-s", "'true'"])
         elif check_de(de, ["lubuntu", "Lubuntu"]):
             check_call(["pcmanfm", "-w", "%s" % path])
-        elif check_de(de, ["i3", "bspwm"]):
+        elif check_de(de, ["i3", "bspwm", "dwm"]):
             check_call(["xwallpaper", "--zoom", path])
         elif check_de(de, ["sway"]):
             check_call(["swaymsg", "output * bg %s fill" % path])
         elif config.setcmd == '':
-            print("Your DE could not be detected to set the wallpaper. "
+            print("Your DE (check with `echo $DESKTOP_SESSION`) could not be detected to set the wallpaper. "
                   "You need to set the 'setcommand' paramter at ~/.config/wallpaper-reddit. "
                   "When you get it working, please file an issue.")
             sys.exit(1)
