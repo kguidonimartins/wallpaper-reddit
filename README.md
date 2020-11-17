@@ -43,7 +43,7 @@ The config file is in `~/.config/wallpaper-reddit`, and will be created automati
 - `random` does the same thing as the `--random` flag.
 
 ## Overlay Titles
-The program has an option to overlay the title of the image directly onto the image itself, so using conky to constantly read the title of the image from `~/.wallpaper/title.txt` is no longer necessary (although it still works, and is recommended if not using the "resize" option).  This function is not enabled by default, but it can be enabled with either the `--settitle` command line flag or more permanently in the config under the `[Title Overlay]` section. There are five options for setting titles: size, x/y alignment, and x/y offset.  
+The program has an option to overlay the title of the image directly onto the image itself, so using conky to constantly read the title of the image from `~/.local/share/wallpaper-from-reddit/title.txt` is no longer necessary (although it still works, and is recommended if not using the "resize" option).  This function is not enabled by default, but it can be enabled with either the `--settitle` command line flag or more permanently in the config under the `[Title Overlay]` section. There are five options for setting titles: size, x/y alignment, and x/y offset.  
 
 ### Overlay Title Configuration Options
 Options for the overlay title can only be set in the config file.  They are under the [Title Overlay] section.
@@ -66,7 +66,7 @@ If wallpaper-reddit is run with the `--save` flag, no wallpaper will be download
 There is a function to ignorelist a certain wallpaper from the script if it is particularly ugly.  Simply run the script with the `--ignorelist` flag.  The script will run as usual, but additionally ignorelist your current wallpaper.  You'll get a new wallpaper and never see the old one again.  
 
 ## External commands and wallpaper info
-Because more information is always better, much more than the wallpaper itself exists in `~/.wallpaper`.
+Because more information is always better, much more than the wallpaper itself exists in `~/.local/share/wallpaper-from-reddit`.
 - `ignorelist.txt` contains the urls of ignorelisted wallpapers, one can manually add urls without issue.
 - `url.txt` is the url of the current wallpaper
 - `title.txt` is the title of the current wallpaper (useful if you want to put the title into conky)
